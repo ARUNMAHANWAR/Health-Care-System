@@ -1,0 +1,68 @@
+Admin
+-----
+create adminclassified(username varchar2(20),password varchar2(20))
+
+
+1.Univers_det Table
+
+create table  univers_det(univid number(3) primary key,univname varchar2(20),univlocation varchar2(20),univaddress varchar2(20),webaddress varchar2(20));
+
+
+2.collage_det table
+
+create table  collage_det (collageid number(3) primary key,univid varchar2(20),collagename varchar2(20),collagelocation varchar2(20),collageaddress varchar2(20),webaddress varchar2(20),aboutcollage varchar2(20),establisheddate varchar2(12))
+/
+
+
+
+3.course_det table
+
+create table  course_det (courseid number(3) primary key,collageid varchar2(20) ,coursename varchar2(20),noofseat varchar2(20),durationofcourse number(3),feedetail number(10,2),courcestartdate varchar2(20));
+
+4.stu_det Table
+create table stu_det (hallticketno string(10) primary key,univid varchar2(20),collageid  varchar2(20),courseid varchar2(20))
+
+
+5.stu_sem_det Table
+
+create table  stu_sem_det(serialno number(5) primary key, hallticketno varchar2(20),semno number(5),samesterstatus varchar2(20));
+
+6.stu_mark_det Table
+
+create table  stu_mark_det(serialno number(5) primary key, hallticketno varchar2(20),semno number(5),sub1 number(3),sub2 number(3),sub3 number(3),sub4 number(3),sub5 number(3),Lab1 number(3),Lab2 number(3), projectwork varchar2(20),total number(3),result varchar2(10));
+
+7.sunday_cinema Table
+
+create table  sunday_cinema(theetorno nomber(2) primary key ,theatename varchar2(20),location varchar2(20),address varchar2(20),moviename  varchar2(20),movielanguage  varchar2(20),showtime1  varchar2(20), showtime2  varchar2(20),showtime3  varchar2(20),showtime4  varchar2(20),phoneno number(10),hero varchar2(20),movietype varchar2(20));
+
+
+8.matrimonial_det table
+ 
+create table  matrimonial_det (Name varchar2(20),age number(3),mailid varchar2(20) primary key,gender varchar2(20),religion varchar2(20),martialstatus varchar2(20),dob  varchar2(20),height Number(8,2),occupation  varchar2(20),nameofres  varchar2(20),country  varchar2(20),eduqual  varchar2(20),contactnumber number);
+
+
+
+Renatls
+-------
+create table rentals(houseno varchar2(20) primary key,ownersname varchar2(30),facilities varchar2(30),location varchar2(30),address varchar2(30),rent number(10,2),adavance number(10,2),city varchar2(30),contactno number)
+/
+
+Real Estate
+-----------
+create table realestate (flotno varchar2(20) primary key,ownersname varchar2(30),facilities varchar2(30),location varchar2(30),address varchar2(30),landacrs number(10,2),city varchar2(30),contassno number)
+/
+
+Wheels_used cars
+----------------
+create table wheels (carcode varchar2(20) primary key,carmodel varchar2(30),costofcar number(10,2),usedsofor varchar2(20),contactper varchar2(30),contactno number,contactaddress varchar2(30),discription varchar2(30))
+/
+
+Situation vacant
+-----------------
+create table jobs (job_code number(15) Primary key, job_name varchar2(20),quali_req varchar2(30),skill_req varchar2(30),resp_req varchar2(40),exp_req number(5),vac_open number(4),createdby varchar2(40),
+createdon varchar2(20),lastdate varchar2(20),status varchar2(20),location varchar2(20))
+
+
+/
+ 
+
